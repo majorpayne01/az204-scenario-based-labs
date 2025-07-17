@@ -1,9 +1,11 @@
+ 
+# Cosmos DB Scenario Based Demos and Labs
+
 #Some Tweaks from Original Repo
 In order to deploy to Azure Government, some tweaks to the repository had to be made.
 
-- Because the button for running the deployment scripts redirects to Commercial Azure, You will need to create a custom deployment and run a modified version of the ARM template. Modify the template to include valid government regions instead of the commercial ones that are set as defaults within the parameters as well as updating the allowedValues to include government ones.  
-# Cosmos DB Scenario Based Demos and Labs
-
+- Because the button for running the deployment scripts redirects to Commercial Azure, You will need to create a custom deployment and run a modified version of the ARM template. Modify the template to include valid government regions instead of the commercial ones that are set as defaults within the parameters as well as updating the allowedValues to include government ones.
+  
 This repo contains easy to deploy demos and detailed labs that show how to build end-to-end solutions for specific scenarios atop a common architecture that centers around Azure Cosmos DB.  
 
 - **Demo**: The intent of the demo is to enable users to quickly get to showing an end-to-end solution working in their subscription, getting at the capabilities of Cosmos DB in the context of each of the scenario. It provides automation for deployment and minimizes any time spent manually configuring or provisioning resources in the target Azure subscription.
