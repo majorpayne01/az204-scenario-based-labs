@@ -1,3 +1,7 @@
+#Some Tweaks from Original Repo
+In order to deploy to Azure Government, some tweaks to the repository had to be made.
+
+- Because the button for running the deployment scripts redirects to Commercial Azure, You will need to create a custom deployment and run a modified version of the ARM template. Modify the template to include valid government regions instead of the commercial ones that are set as defaults within the parameters as well as updating the allowedValues to include government ones.  
 # Cosmos DB Scenario Based Demos and Labs
 
 This repo contains easy to deploy demos and detailed labs that show how to build end-to-end solutions for specific scenarios atop a common architecture that centers around Azure Cosmos DB.  
