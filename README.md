@@ -7,6 +7,7 @@ In order to deploy to Azure Government, some tweaks to the repository had to be 
 - Because the button for running the deployment scripts redirects to Commercial Azure, You will need to create a custom deployment and run a modified version of the ARM template. Modify the template to include valid government regions instead of the commercial ones that are set as defaults within the parameters as well as updating the allowedValues to include government ones.
 - Make sure the api versions are updated to versions currently supported by Azure Government.
 - Make sure Microsoft.Sql Resource Provider is registered under the appropiate subscription.
+- Updating Endpoints and Urls to point to Azure Government versions.
   
 This repo contains easy to deploy demos and detailed labs that show how to build end-to-end solutions for specific scenarios atop a common architecture that centers around Azure Cosmos DB.  
 
