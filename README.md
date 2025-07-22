@@ -9,7 +9,7 @@ In order to deploy to Azure Government, some tweaks to the repository had to be 
 - Make sure Microsoft.Sql Resource Provider is registered under the appropiate subscription.
 - Updating Endpoints and Urls to point to Azure Government versions.
 - Add Key Vault Access Policies for Managed Identities with RBAC as Key Vault Secrets User for the function apps, web app, and synapse workspace and then add yourself as a Key Vault Administrator during configuration of the environment. 
-  
+## Differentiation between the demo and lab
 This repo contains easy to deploy demos and detailed labs that show how to build end-to-end solutions for specific scenarios atop a common architecture that centers around Azure Cosmos DB.  
 
 - **Demo**: The intent of the demo is to enable users to quickly get to showing an end-to-end solution working in their subscription, getting at the capabilities of Cosmos DB in the context of each of the scenario. It provides automation for deployment and minimizes any time spent manually configuring or provisioning resources in the target Azure subscription.
