@@ -11,7 +11,7 @@ In order to deploy to Azure Government, some tweaks to the repository had to be 
 - Add Key Vault Access Policies for Managed Identities with RBAC as **Key Vault Secrets User** for the function apps, web app, and synapse workspace and then add yourself as a **Key Vault Administrator** during configuration of the environment.
 - Will not be able to stream data via a stream analytics job directly to Power BI. This is only available on commercial and is being depreciated in October 2027 (At this point everyone would be using Microsoft Fabric). I replaced the Power BI Output from the stream analytics job with an Azure SQL Database and would setup DirectQuery via Power BI. Not ideal but there needed to be a workaround.
 - Must upgrade the starter and solution project to **.NET 8** from **.NET 3**, which is no longer supported. This also includes upgrading the Newtonsoft.Json to 13.0.3 and making sure the **Microsoft.NET.SDK.Functions** version in your .csproj file of each solution is **4.2.0** or later.
-- For the function and web app deployments I preferred publishing the web app locally, zipping it, then deploying it to azure so I didn't follow the instructions for those tasks. 
+- For the function and web app deployments I preferred publishing the web app locally, zipping it (dotnet clean -> dotnet build -> dotnet publish -> zip /$appName.zip -> az webapp deploy...) , then deploying it to azure so I didn't follow the instructions for those tasks. 
 
 ## Architecture Considerations
 - When designing an end-to-end solution using function apps, it is generally a good idea to divide extremely high-load functions into separate function apps.
